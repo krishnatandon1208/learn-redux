@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -23,10 +24,21 @@ const decrement = () => {
 }
 
 //REDUCER
+const counterReducer = (state=11, action) => {
+    switch(action.type) {
+        case "INCREMENT": 
+            return state+1;
+        case "DECREMENT":
+            return state-1;
+    }
+}
+
+let store = createStore(counterReducer);
+store.subscribe(() => console.log(store.getState()));
 
 //DISPATCH
-
-
+store.dispatch(increment());
+store.dispatch(decrement());
 
 ReactDOM.render(
     <React.StrictMode>
