@@ -16,6 +16,12 @@ const increment = () => {
     }
 }
 
+const decrement = () => {
+    return {
+        type: "DECREMENT" //this is the name of my another action
+    }
+}
+
 //REDUCER
 
 //DISPATCH
