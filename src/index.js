@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//STORE - GLOBALIZED STATE
+
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
